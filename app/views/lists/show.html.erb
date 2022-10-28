@@ -2,6 +2,7 @@
 
   <% @list.bookmarks.each do |bookmark| %>
     <div class="my-4">
+        <%= cl_image_tag bookmark.movie.photo.key %>
         <h3> <%= bookmark.movie.title %> </h3>
         <p> <%= bookmark.movie.overview %></p>
         <h5> <strong><%= bookmark.movie.rating %></strong></h5>
