@@ -1,0 +1,16 @@
+<h1>My Movie Lists</h1>
+
+<div>
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list), class: "text-decoration-none" do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= list.name %>
+      </div>
+      <% end %>
+    <br>
+  <% end %>
+</div>
+
+<div>
+  <p> <%= link_to "Create new list", new_list_path, class: "text-decoration-none" %></p>
+</div>
